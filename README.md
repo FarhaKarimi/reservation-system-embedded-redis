@@ -1,9 +1,9 @@
-
+خوب، من یک نسخه **کاملاً GitHub-friendly** و **فارسی خوانا** از README پروژه شما آماده کردم که **چپ‌چین است و جدول‌ها و هدینگ‌ها مرتب** نمایش داده می‌شوند.
 
 ---
 
 ````markdown
-# Project: Reservation System
+# پروژه سیستم رزرو منابع
 
 ## 1. توضیحات کلی
 
@@ -114,28 +114,28 @@ src/main/java/com/example/reservation/
 
 ### 7.1 Authentication
 
-| Method | URL              | Body                                                                                  | Description       |
+| Method | URL              | Body                                                                                  | توضیح             |
 | ------ | ---------------- | ------------------------------------------------------------------------------------- | ----------------- |
 | POST   | /api/auth/signup | `{ "username":"Ali", "email":"ali@example.com", "password":"123456", "role":"USER" }` | ثبت‌نام کاربر     |
 | POST   | /api/auth/login  | `{ "email":"ali@example.com", "password":"123456" }`                                  | ورود و دریافت JWT |
 
 ### 7.2 Resources
 
-| Method | URL            | Header                              | Body                                                            | Description               |
+| Method | URL            | Header                              | Body                                                            | توضیح                     |
 | ------ | -------------- | ----------------------------------- | --------------------------------------------------------------- | ------------------------- |
 | GET    | /api/resources | `Authorization: Bearer <JWT>`       | –                                                               | مشاهده منابع (USER/Admin) |
 | POST   | /api/resources | `Authorization: Bearer <Admin JWT>` | `{ "name":"اتاق A", "description":"...", "location":"طبقه ۲" }` | ایجاد منبع (Admin فقط)    |
 
 ### 7.3 Reservations
 
-| Method | URL               | Header                        | Body                                                                                     | Description          |
+| Method | URL               | Header                        | Body                                                                                     | توضیح                |
 | ------ | ----------------- | ----------------------------- | ---------------------------------------------------------------------------------------- | -------------------- |
 | GET    | /api/reservations | `Authorization: Bearer <JWT>` | –                                                                                        | مشاهده رزروهای کاربر |
 | POST   | /api/reservations | `Authorization: Bearer <JWT>` | `{ "resourceId":1, "startTime":"2025-11-12T09:00:00", "endTime":"2025-11-12T10:00:00" }` | رزرو منبع            |
 
 ### 7.4 Ratings (اختیاری)
 
-| Method | URL          | Header                        | Body                            | Description        |
+| Method | URL          | Header                        | Body                            | توضیح              |
 | ------ | ------------ | ----------------------------- | ------------------------------- | ------------------ |
 | POST   | /api/ratings | `Authorization: Bearer <JWT>` | `{ "resourceId":1, "score":5 }` | امتیازدهی به منابع |
 
@@ -185,14 +185,15 @@ http://localhost:8080/swagger-ui.html
 
 ---
 
-نکات کلیدی برای GitHub:
+این نسخه:  
 
-1. همیشه **کدها را در سه backtick ```** بگذارید.  
-2. جدول‌ها باید فاصله‌ها درست باشند و با Pipe `|` ساخته شوند.  
-3. خطوط افقی با `---` ساخته می‌شوند.  
-4. از ایموجی‌ها خودداری کنید تا در GitHub درست نمایش داده شود.  
+- **چپ‌چین** است (GitHub به خوبی نمایش می‌دهد)  
+- **جدول‌ها مرتب هستند**  
+- **کدها داخل ``` کد** هستند و فونت مناسب Markdown دارند  
 
 ---
 
+اگر بخواهی، من می‌توانم **همین README + Postman Collection آماده** را در یک فایل ZIP برای دانلود آماده کنم تا مستقیم استفاده کنی و همه مثال‌ها تست شوند.  
 
+میخوای برات آماده کنم؟
 ````
